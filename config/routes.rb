@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
-  get 'orders/new'
-  get 'orders/show'
-  get 'orders/index'
-  get 'orders/edit'
-  get 'items/index'
-  get 'items/show'
-  get 'items/new'
-  get 'items/edit'
-  get 'customers/index'
-  get 'customers/show'
-  get 'customers/new'
-  get 'customers/edit'
+  get '/orders', to: 'orders#index'
+  get '/orders/:id', to: 'orders#show'
+  get '/items', to: 'items#index'
+  get '/items/:id', to: 'items#show'
+  get '/customers', to: 'customers#index'
+  get '/customers/:id', to: 'customers#show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
